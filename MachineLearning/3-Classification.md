@@ -5,6 +5,7 @@ class: Intro to Machine Learning
 ---
 
 # Classification
+---
 
 Classification is a way to map discrete values, i.e. true or false
 * Regression techniques do not work well with classification

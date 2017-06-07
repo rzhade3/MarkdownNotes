@@ -5,6 +5,7 @@ class: Intro to Machine Learning
 ---
 
 # Linear Regression
+---
 
 Linear Regression is one of the most common applications for machine learning
 * Given a data set, coming up with a function that best maps _x_ to __y__
