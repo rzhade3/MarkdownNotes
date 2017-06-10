@@ -24,16 +24,18 @@ This looks like this:
 	$$
 	z = \theta_T x
 	$$
+
 	$$
 	g(z) = \frac{1}{1 + e^{-z}}
 	$$
-$ h_[\theta](x)=g(\theta^[T] x) $ will give the probability that our output is 1 on input _x_
+	* $ h_{\theta}(x)=g(\theta^T x) $ will give the probability that our output is 1 on input _x_
 
 ### Decision Boundary
 Typically, for classification problems, we want to predict with absolute certainty instead of a probability. We can do this with a decision boundary, i.e. a breakpoint
 $$
 hθ(x) \geq 0.5 \rightarrow y = 1
 $$
+
 $$
 hθ(x) < 0.5 \rightarrow y = 0
 $$
