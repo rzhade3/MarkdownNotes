@@ -215,4 +215,4 @@ This is pretty much a linked list with multiple levels, to reduce the Big O of f
 		1. **Best Case:** O(log n)
 		2. **Average case:** O(log n)
 		3. **Worst case:** O(n)
-	4 **Space Complexity:** O(n log n)
+	4. **Space Complexity:** O(n log n)

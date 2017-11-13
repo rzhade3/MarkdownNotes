@@ -26,6 +26,29 @@ This looks like this:
 
 ### Decision Boundary
 Typically, for classification problems, we want to predict with absolute certainty instead of a probability. We can do this with a decision boundary, i.e. a breakpoint
-<p align="center"><img src="svgs/0117dce132b033ba8daef8a4d8597e42.svg?invert_in_darkmode" align=middle width=138.93049499999998pt height=16.438356pt/></p>
+<p align="center"><img src="svgs/c77d022dfa33a80f0a42ab749d8c9bce.svg?invert_in_darkmode" align=middle width=146.367705pt height=16.438356pt/></p>
 
-<p align="center"><img src="svgs/9e5b5f04b873564283e37077ad10a33f.svg?invert_in_darkmode" align=middle width=138.93049499999998pt height=16.438356pt/></p>
+<p align="center"><img src="svgs/b83c9664a11ee4efd7d388a1ea921694.svg?invert_in_darkmode" align=middle width=146.367705pt height=16.438356pt/></p>
+
+### Hypothesis
+The hypothesis in this case is of the form:
+<p align="center"><img src="svgs/487cf5f2a37a3b876cfad612c67595d0.svg?invert_in_darkmode" align=middle width=129.563775pt height=34.367685pt/></p>
+
+### Cost Function
+Logistic regression requires a different cost function as well:
+
+<p align="center"><img src="svgs/3328aa09998778cb3db6464409942ef0.svg?invert_in_darkmode" align=middle width=307.3653pt height=49.31553pt/></p>
+
+We plug this cost function into the overal J(θ) function, to get the overall function:
+
+<p align="center"><img src="svgs/bb99d7730a441d6b2c548b3936d580e5.svg?invert_in_darkmode" align=middle width=242.00714999999997pt height=44.897324999999995pt/></p>
+
+which is equal to 
+
+<p align="center"><img src="svgs/402c43a886a8a160a745a13a7c477d2f.svg?invert_in_darkmode" align=middle width=425.39144999999996pt height=44.897324999999995pt/></p>
+
+### Gradient Descent
+The formula for gradient descent with these equations is nearly identical to the one that is used for linear regression. 
+<p align="center"><img src="svgs/217e66e643cf9619c43757c3037045cf.svg?invert_in_darkmode" align=middle width=249.34965pt height=44.897324999999995pt/></p>
+
+However, note that the hypothesis in this case is different: see [hypothesis](#Hypothesis)
