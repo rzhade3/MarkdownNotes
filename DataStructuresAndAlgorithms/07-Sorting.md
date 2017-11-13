@@ -57,13 +57,15 @@ def insertionSort(array):
 	* All other cases are O(n^2)
 
 ### Cocktail Shaker sort
-* Simply a combination of bubble sort and insertion sort. 
-	* Do one pass of bubble sort, then, once you reach the end, do insertion sort all the way back to the first element, and continue oscillating, with smaller and smaller bounds
+* Two passthroughs of bubble sort per iteration
+	* Do one pass of bubble sort going towards the right, then one pass of bubble sort going to the left
+* In each iteration, the window that is sorted gets smaller
+	* After first passthrough, we know that the last element is sorted. After second passthrough, we know that first element is sorted, and so on.
 * Same Big O as the other two, but is on average, twice as fast as the other two.
 * Stable and in place
 
 ### Selection Sort
-* Stable and in place
+* Unstable and in place
 * Pseudocode:
 ```python
 def selectionSort(array):
