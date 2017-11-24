@@ -10,7 +10,7 @@ class: Intro to Machine Learning
 Linear regression is great and all, but it is still iterative. What if there was a way to minimize J in one step?
 * The normal equation works by taking the derivative of J with respect to θ_j, and setting it to zero (normalizing the curve). This is given by the formula:
 
-<p align="center"><img src="svgs/eb2026dab93a888baa5aaab2ff4cca11.svg?invert_in_darkmode" align=middle width=134.611455pt height=18.75984pt/></p>
+<p align="center"><img src="https://raw.githubusercontent.com/rzhade3/MarkdownNotes/master/MachineLearning/svgs/normal_equation_formula.svg?invert_in_darkmode" align=middle width=134.611455pt height=18.75984pt/></p>
 
 With this equation, there is no need to do feature scaling, or bother with learning rates
 
