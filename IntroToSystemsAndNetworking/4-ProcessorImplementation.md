@@ -13,3 +13,5 @@ To this end,
 		* Output only depends on current inputs
 	* **Sequential Logic:** Stateful logic, done with flip flops
 * Hardware Resources
+
+### Processor Design Issues:
