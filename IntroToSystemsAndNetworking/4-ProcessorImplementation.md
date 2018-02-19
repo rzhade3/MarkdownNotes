@@ -24,8 +24,14 @@ To this end, we have a particular set of hardware that can work reasonably work 
 	* The clock works by cycling power on and off
 
 	![Clock Cycles](http://image.slidesharecdn.com/interrupts-100920105212-phpapp01/95/interrupts-15-728.jpg?cb=1284980027)
+
 	* With level logic, changes in state happen whever the clock is high
 		* Changes either happen on *rising edge* or *falling edge*
-* Hardware Resources
+			* **Positive Edge Triggering:** If a state change happens on the *rising edge* of the clock cycle
+			* **Negative Edge Triggering:** If a state change happens on the *falling edge* of the clock cycle
+	* Since state changes/ sequential logic only happens on clock changes, there is a minimum length of time for each clock cycle
+	```math
+	Clock Width > D_{r-output-stable} + D_{wire-PC-addr} + D_{mem-read} + D_{wire-Dout-IR} + D_{r-setup} + D_{r-hold}
+	```
 
-### Processor Design Issues:
+### Processor Design Issues
