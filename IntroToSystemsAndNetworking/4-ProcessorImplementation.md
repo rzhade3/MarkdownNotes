@@ -25,3 +25,7 @@ To this end, we have a particular set of hardware that can work reasonably work 
 
 	![Clock Cycles](http://image.slidesharecdn.com/interrupts-100920105212-phpapp01/95/interrupts-15-728.jpg?cb=1284980027)
 	* With level logic, changes in state happen whever the clock is high
+		* Changes either happen on *rising edge* or *falling edge*
+* Hardware Resources
+
+### Processor Design Issues:
