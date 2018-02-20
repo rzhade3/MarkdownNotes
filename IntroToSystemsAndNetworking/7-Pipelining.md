@@ -1,6 +1,8 @@
 # Pipelining
 
-## Space and Time Metrics
+## Performance Metrics
+
+### Execution Time
 
 CPI: Clocks per Instruction
 
@@ -9,7 +11,7 @@ Execution Time = $(\sum CPI_{j}) * clock cycle time $, where $1 \leq j \leq n$
 Or, you can calculate execution time by using the average CPI:
 ExecutionTime = $n * CPI_{avg} * clock cycle time$
 
-## Instruction Frequency
+### Instruction Frequency
 
 **Instruction Frequency:** How often a particular instruction executes in a program
 
@@ -25,6 +27,22 @@ $$ Total instructions = (5 * 50) + (100 - 5) = 250 + 95 = 345$$
 $$ Number of ADD instructions = 50$$
 $$Dynamic Frequency = 50/345 = 14.5%$$
 
+### Speedup
+The speedup of processor A over processor B can be calculated using the following formula.
+$$ Speedup_{A over B} = \frac{Execution Time of B}{Execution Time of A}
+
+### Amdahl's Law
+
 ## Benchmarks
 
 **Benchmarks:** A set of programs representative of the processor's workload.
+
+## Process Performance
+
+**Ways to Improve Peformance:**
+1. Increasing Clock Speed
+2. Lower CPI (Datapath Organization)
+3. Reduction in number of executed instructions
+
+All the three aformentioned optimizations cannot be done in isolation, and they must be done simultaneously, as they affect each other.
+
