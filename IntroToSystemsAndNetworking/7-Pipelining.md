@@ -12,7 +12,9 @@ ExecutionTime = $n * CPI_{avg} * clock cycle time$
 ## Instruction Frequency
 
 **Instruction Frequency:** How often a particular instruction executes in a program
+
 **Static Instruction Frequency:** The number of times an instruction occurs in compiled code
+
 **Dynamic Instruction Frequency:** The number of times an instruction is executed when the program is ran
 
 For example, if there is a program with a hundred instructions with one ADD instruction, but the ADD instruction occurs in a loop of length 5 that runs 50 times, there would be a difference in static and dynamic frequency.
