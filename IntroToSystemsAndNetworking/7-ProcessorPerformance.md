@@ -33,6 +33,13 @@ If there is a program with a hundred instructions, and one ADD instruction, but 
 4. Number of ADD instructions = $ 50 $
 5. Dynamic Frequency = $ 50/345 = 14.5% $$
 
+### Speedup
+The speedup of processor A over processor B can be calculated using the following formula.
+$$ Speedup_{A over B} = \frac{Execution Time of B}{Execution Time of A}
+
+### Amdahl's Law
+
+
 ## Benchmarks
 Since execution time is not completely dependent on processor speed, we need some other way to compare processors against one another
 
@@ -41,7 +48,7 @@ Since execution time is not completely dependent on processor speed, we need som
 Typically these benchmarks are the *kernels* of real programs, like a matrix multiply function or number of iterations of gradient descent. Using this, there are five ways to calculate 
 1. **Total Execution Time:** Sum total of execution time for all programs
 2. **Arithmetic Mean:** Normal mean of execution times for all programs
-3. **Weighted Arithmetic Mean:** If we know the frequency
+3. **Weighted Arithmetic Mean:** If we know the frequency of each type of instruction, use this to calculate weighted average
 	* 
 	* Useful if we know the ratio of instructions
 4. **Geometric Mean:** Getting the p^th root of the product of the p values in the dataset
@@ -50,3 +57,12 @@ Typically these benchmarks are the *kernels* of real programs, like a matrix mul
 5. **Harmonic Mean:** Calculated by taking reciprocal of the arithmetic mean of reciprocals of all values
 	* $ HM = 1 / arithmetic mean(reciprocals of all values) $
 	* Useful when dataset contains a lot of ratios
+
+
+## Process Performance
+There are three ways in which to improve processor performance:
+1. Increasing Clock Speed
+2. Lower CPI (Datapath Organization)
+3. Reduction in number of executed instructions
+
+All the three aformentioned optimizations cannot be done in isolation, and they must be done simultaneously, as they affect one another.
