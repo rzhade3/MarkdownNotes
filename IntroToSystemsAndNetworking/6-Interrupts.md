@@ -19,12 +19,17 @@ There are three types of discontinuities in program execution:
 * **Traps:** When programs make system calls for File I/O or other services from system
 	* Internally generated
 	* Synchronous
-    *
+  *
 
 ## Dealing with Program Discontinuities
-**Tricky Situations with Discontinuities:**
-1. They can happen anywhere during instruction execution.
-2. Unplanned discontinuity occurs and could be unrelated to the program.
-3. Hardware has to determine the address of the handler to transfer control from the program to the handler.
-4. Since hardware has saved PC implicitly, handler has to discover how to resume normal program execution.
+* **Handler:** Procedure that is executed when a discontinuity occurs
+
+Since program discontinuities happen at any time, there are four things that are tricky
+1. Can happen anytime during program execution, even in the middle of an instruction
+2. Can be unplanned, and completely unrelated to the current program
+3. When the program notes the program discontinuity, the hardware needs to determine the address of the handler
+4. The handler needs to be able to return back to normal program execution
+
+To handle different types of interrupts, the OS uses a ***Interrupt Vector Table***
+* Holds handler addresses for each of the interrupt instructions
 
