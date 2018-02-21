@@ -32,4 +32,10 @@ Since program discontinuities happen at any time, there are four things that are
 
 To handle different types of interrupts, the OS uses a ***Interrupt Vector Table***
 * Holds handler addresses for each of the interrupt instructions
+* OS sets this up at boot time
+
+**Exception/Trap Register (ETR)**
+* In the case of traps/execptions, the hardware generates this vector internally.
+*
+
 
