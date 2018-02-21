@@ -33,11 +33,17 @@ If there is a program with a hundred instructions, and one ADD instruction, but 
 4. Number of ADD instructions = $ 50 $
 5. Dynamic Frequency = $ 50/345 = 14.5% $$
 
-### Speedup
+## Speedup
 The speedup of processor A over processor B can be calculated using the following formula.
 $$ Speedup_{A over B} = \frac{Execution Time of B}{Execution Time of A}
 
-### Amdahl's Law
+## Amdahl's Law
+Time_{after} = Time_{unaffected} + Time_{affected}/x
+In this equation, we can find the total execution time after a change is the sum of the execution time unaffected by the change and the ratio of the affected time and the extent of improvement.
+
+## Throughput vs. Latency
+**Latency:** The number of clock cycles the processor takes to execute an individual instruction (CPI).
+**Throughput:** The number of instructions the processor executes in each clock cycle (IPC).
 
 
 ## Benchmarks
@@ -45,15 +51,15 @@ Since execution time is not completely dependent on processor speed, we need som
 
 **Benchmarks:** A set of programs representative of the processor's workload
 
-Typically these benchmarks are the *kernels* of real programs, like a matrix multiply function or number of iterations of gradient descent. Using this, there are five ways to calculate 
+Typically these benchmarks are the *kernels* of real programs, like a matrix multiply function or number of iterations of gradient descent. Using this, there are five ways to calculate
 1. **Total Execution Time:** Sum total of execution time for all programs
 2. **Arithmetic Mean:** Normal mean of execution times for all programs
 3. **Weighted Arithmetic Mean:** If we know the frequency of each type of instruction, use this to calculate weighted average
-	* 
+	*
 	* Useful if we know the ratio of instructions
 4. **Geometric Mean:** Getting the p^th root of the product of the p values in the dataset
-	* 
-	* 
+	*
+	*
 5. **Harmonic Mean:** Calculated by taking reciprocal of the arithmetic mean of reciprocals of all values
 	* $ HM = 1 / arithmetic mean(reciprocals of all values) $
 	* Useful when dataset contains a lot of ratios
@@ -66,3 +72,4 @@ There are three ways in which to improve processor performance:
 3. Reduction in number of executed instructions
 
 All the three aformentioned optimizations cannot be done in isolation, and they must be done simultaneously, as they affect one another.
+
