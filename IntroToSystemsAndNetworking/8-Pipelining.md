@@ -24,3 +24,23 @@ The basic idea behind pipelining is using the hardware resources in the processo
 1. **Need for a symmetric instruction format:** This means that locations of certain fields in the instruction (reg specifiers, offset size) remain unchanged independent of the instruction.
 2. **Need to ensure equal amount of work in each stage:** Ensures that clock cycle time is optimal since the slowest member of the pipeline determines it.
 
+## Pipeline Hazards
+
+Hazards reduce pipeline efficiency.
+
+### Structural Hazards
+
+This primarily comes about due to hardware limitations. Some examples could be a single bus or a single ALU. This can be fixed by adding a *feedback line*, which would tell previous stages to not send a different instruction and stay on the same instruction so that stage could finish the instruction it was on.
+
+**Key Points:**
+1. The pipeline is stalled when an instruction cannot proceed to the next stage.
+2. The result of such stall is to introduce a bubble in the pipeline.
+3. A NOP instruction is the bubble in the pipeline. A stage executing a NOP instruction does nothing for one cycle.
+
+### Data Hazards
+This can happen when there's a dependency between two instructions.
+1. **RAW (Read After Write)**: This can be solved using data forwarding, by stalling the instruction that causes the *RAW* hazard in *ID/RR* till the register value is available.
+2. **WAR (Write After Read)**
+3. **WAW (Write After Write)**
+
+### Control Hazards
