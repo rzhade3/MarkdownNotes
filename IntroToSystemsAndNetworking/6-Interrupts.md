@@ -19,7 +19,7 @@ There are three types of discontinuities in program execution:
 * **Traps:** When programs make system calls for File I/O or other services from system
 	* Internally generated
 	* Synchronous
-  *
+    * Examples: System call, software interrupts, page fault, emulated instructions
 
 ## Dealing with Program Discontinuities
 * **Handler:** Procedure that is executed when a discontinuity occurs
