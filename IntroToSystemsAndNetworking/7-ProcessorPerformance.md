@@ -71,5 +71,5 @@ There are three ways in which to improve processor performance:
 2. Lower CPI (Datapath Organization)
 3. Reduction in number of executed instructions
 
-All the three aformentioned optimizations cannot be done in isolation, and they must be done simultaneously, as they affect one another.
+All the three aforementioned optimizations cannot be done in isolation, and they must be done simultaneously, as they affect one another.
 

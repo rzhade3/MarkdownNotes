@@ -36,6 +36,3 @@ To handle different types of interrupts, the OS uses a ***Interrupt Vector Table
 
 **Exception/Trap Register (ETR)**
 * In the case of traps/execptions, the hardware generates this vector internally.
-*
-
-
