@@ -48,3 +48,4 @@ A typical program cycles between activity on the processor and I/O devices.
 1. First Come First Serve
 2. Shortest Job First
 3. 
+
