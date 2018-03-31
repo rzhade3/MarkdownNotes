@@ -44,3 +44,11 @@ This can happen when there's a dependency between two instructions.
 3. **WAW (Write After Write)**
 
 ### Control Hazards
+Control hazards refer to the breaks in the program due to branch instructions.
+
+1. **Conservative Approach:** We add one NOP if branch isn't taken, and two if branch is taken.
+2. **Delayed Branch:** We assume that the instruction following the branch executes irrespective of the branch outcome. We put a NOP in the instruction following the branch instruction (delay slot). The smart compiler will insert useful instructions into these delay slots.
+3. **Branch Prediction:**
+
+
+
