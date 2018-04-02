@@ -48,7 +48,8 @@ Control hazards refer to the breaks in the program due to branch instructions.
 
 1. **Conservative Approach:** We add one NOP if branch isn't taken, and two if branch is taken.
 2. **Delayed Branch:** We assume that the instruction following the branch executes irrespective of the branch outcome. We put a NOP in the instruction following the branch instruction (delay slot). The smart compiler will insert useful instructions into these delay slots.
-3. **Branch Prediction:**
+3. **Branch Prediction:** We assume the outcome of the branch to be one way and start letting instructions into the pipeline even upon detecting a branch. When there's misprediction, we need to employ flushing. Flushing is where there is a feedback line from EX to the previous two stages. Upon receiving this flush signal, both the IF and ID/RR stages abandon the partial execution of the instructions they are currently dealing with and start sending “bubbles” down the pipeline.
+4. **Prediction with Branch Target Buffer (BTB):**
 
 
 
