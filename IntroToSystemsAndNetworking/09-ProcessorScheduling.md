@@ -51,10 +51,10 @@ Metrics can be either *system centric* or *user centric*
 | Throughput | n / T | Jobs / sec | System | Metric quantifying the number of jobs n executed in time interval T |
 | Avg. Turnaround time | (t1 + t2 + ... + tn) / n | Seconds | System | Metric quantifying the average time it takes for a job to complete |
 | Avg. Waiting time | ((t1-e1) + (t2-e2) + ... + (tn-en)) / n | Seconds | System | Metric quantifying the average waiting time that a job experiences |
-| Response time/ turnaround time | t*i* | Seconds | User | metric quantifying the turnaround time for a specific job *i* | 
-| Variance in Response time | E[(ti – ei)^2] | Seconds^2 | User | metric that quantifies the statistical variance of the actual response time (ti) experienced by a process (Pi) from the expected value (tavg) |
-| Starvation | - | - | User | Qualitative metric that signifies denial of service to a particular process or a set of processes due to some intrinsic property of the scheduler |
-| Convoy effect | - | - | User | Qualitative metric that results in a detrimental effect to some set of processes due to some intrinsic property of the scheduler |
+| Response time/ turnaround time | t*i* | Seconds | User | Metric quantifying the turnaround time for a specific job *i* | 
+| Variance in Response time | E[(ti – ei)^2] | Seconds^2 | User | Metric that quantifies thevariance of the actual response time experienced by a process from the expected value |
+| Starvation | - | - | User | If a job does not make forward progress towards completion |
+| Convoy effect | - | - | User | If the scheduling of jobs follows a fixed pattern |
 
 Below is an example of scheduling metrics
 
@@ -63,9 +63,9 @@ Below is an example of scheduling metrics
 ### Types of Scheduling
 | Name | Preemptive | Starvation | Convoy Effect |
 | ---- | ---------- | ---------- | ------------- |
-| First Come First Serve | No(Yes) | No | Yes |
-| Shortest Job First | No(Yes) | Yes | No |
-| Priority | Yes/No | sometimes | sometimes |
+| First Come First Serve | Usually no, sometimes yes | No | Yes |
+| Shortest Job First | Usually no, sometimes yes) | Yes | No |
+| Priority | Both | Sometimes | Sometimes |
 | Shortest Remaining Job First | Yes | Yes | No | 
 | Round Robin | Yes | No | No | 
 
