@@ -45,7 +45,11 @@ A typical program cycles between activity on the processor and I/O devices.
 ### Performance Metrics
 
 ### Types of Scheduling
-1. First Come First Serve
-2. Shortest Job First
-3. 
+| Name | Preemptive | Starvation | Convoy Effect |
+| ---- | ---------- | ---------- | ------------- |
+| First Come First Serve | No(Yes) | No | Yes |
+| Shortest Job First | No(Yes) | Yes | No |
+| Priority | Yes/No | sometimes | sometimes |
+| Shortest Remaining Job First | Yes | Yes | No | 
+| Round Robin | Yes | No | No | 
 
