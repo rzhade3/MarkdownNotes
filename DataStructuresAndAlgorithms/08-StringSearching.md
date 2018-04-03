@@ -34,7 +34,7 @@ def bruteForce(text, pattern):
 I.e. the last table for `swiggity` would be:
 
 | s | w | i | g | t | y |  *  |
-|-----------------------------|
+|---|---|---|---|---|---|-----|
 | 0 | 1 | 5 | 4 | 6 | 7 |  -1 |
 
 * Pseudocode for generating last table:
