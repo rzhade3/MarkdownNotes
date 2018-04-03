@@ -43,6 +43,22 @@ A typical program cycles between activity on the processor and I/O devices.
 * **IO Burst:** The stretch of time a process needs to complete an IO operation
 
 ### Performance Metrics
+Metrics can be either *system centric* or *user centric*
+
+| Name | Notation | Units | Centricity | Description |
+|-----|-----|-----|-----|-----|
+| CPU Utilization | - | % | User | Percent of time that the CPU is busy |
+| Throughput | n / T | Jobs / sec | System | Metric quantifying the number of jobs n executed in time interval T |
+| Avg. Turnaround time | (t1 + t2 + ... + tn) / n | Seconds | System | Metric quantifying the average time it takes for a job to complete |
+| Avg. Waiting time | ((t1-e1) + (t2-e2) + ... + (tn-en)) / n | Seconds | System | Metric quantifying the average waiting time that a job experiences |
+| Response time/ turnaround time | t*i* | Seconds | User | metric quantifying the turnaround time for a specific job *i* | 
+| Variance in Response time | E[(ti – ei)^2] | Seconds^2 | User | metric that quantifies the statistical variance of the actual response time (ti) experienced by a process (Pi) from the expected value (tavg) |
+| Starvation | - | - | User | Qualitative metric that signifies denial of service to a particular process or a set of processes due to some intrinsic property of the scheduler |
+| Convoy effect | - | - | User | Qualitative metric that results in a detrimental effect to some set of processes due to some intrinsic property of the scheduler |
+
+Below is an example of scheduling metrics
+
+![Sigmoid function](images/example_metrics.png)
 
 ### Types of Scheduling
 1. First Come First Serve
