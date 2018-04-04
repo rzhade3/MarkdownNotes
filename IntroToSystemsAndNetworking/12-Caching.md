@@ -32,6 +32,21 @@ This is calculated by EMAT of L = Access time of L + (m * EMAT of L below OR mis
 The miss penalty is used to calculate the EMAT of the level right above the main memory.
 
 ## Cache Organization
+Three facets to cache organization:
+1. **Placement:** Where do we place the data read from memory in the cache?
+2. **Lookup Algorithm:** How do we find something placed in the cache?
+3. **Validity:** Is the data in the cache valid?
+
+### Misses
+1. **Compulsory:** When the cache is first accessed (it's empty)
+2. **Capacity:** Cache is full and miss is incurred
+3. **Conflict:** Due to limited associativity, even though cache isn't full
+
+Precedence of misses is in the above order.
+
+## Direct-Mapped
+There is a one-to-one correspondance between a cache location and a memory location.
+
 
 
 
