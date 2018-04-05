@@ -47,6 +47,11 @@ Precedence of misses is in the above order.
 ## Direct-Mapped
 There is a one-to-one correspondance between a cache location and a memory location.
 
+## Caching and Pipelining
+I-MEM and D-MEM are replaced with I-Cache and D-Cache.
+* **Miss in the IF Stage:** IF stage sends the reference to memory to retrieve this instruction. Until this happens, the processor sends NOPs to the next stage.
+* **Miss in the MEM Stage:** Only happens for load/store. MEM sends NOPs to WB till the memory reference completes. It also freezes the previous instructions from advancing.
+
 
 
 
