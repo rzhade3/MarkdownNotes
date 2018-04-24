@@ -31,3 +31,11 @@ This refers to the moving of data back and forth between a device and a processo
 * **Interrupt:** Enabling interrupt bit for a device upon an interrupt.
 
 Polling and interrupt work for slow-speed devices that produce data asynchronously (data production is not rhythmic). However, programmed I/O doesn't work for high-speed devices like disks that produce data synchronously. Even for slow speed devices, programmed I/O is an inefficient use of the processor's resources.
+
+## Direct Memory Access
+* some I/O cannot wait on the CPU to handle the data that it is giving
+* For example for I/O that is synchronous, it could lose/overwrite data in the time it takes for the CPU to read the data and write it to main memory
+* this is why you need direct memory access, so that the I/O can directly add its data to memory
+* in essence, it steals the bus from the CPU and inputs its data to memory 
+* 
+
