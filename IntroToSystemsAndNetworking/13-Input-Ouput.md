@@ -30,4 +30,12 @@ This refers to the moving of data back and forth between a device and a processo
 * **Polling:** Processor continually checking if the device has new data.
 * **Interrupt:** Enabling interrupt bit for a device upon an interrupt.
 
-Polling and interrupt work for slow-speed devices that produce data asynchronously (data production is not rhythmic). However, programmed I/O doesn't work for high-speed devices like disks that produce data synchronously. Even for slow speed devices, programmed I/O is an inefficient use of the processor's resources.
+Polling and interrupt work for slow-speed devices that produce data asynchronously (data production is not rhythmic). However, programmed I/O doesn't work for high-speed devices like disks that produce data synchronously. There is potential for data loss when programmed I/O is used for high speed devices. Even for slow speed devices, programmed I/O is an inefficient use of the processor's resources.
+
+## Direct Memory Access (DMA)
+Device controller has the capability to transfer data between itself and memory without the intervention of the processor. The transfer is initiated by the processor, but then has nothing ot do with the transfer itself.
+
+**Streaming Devices:** Once data transfer starts in either direction, data moves in or out of the device continuously until transfer completion.
+
+### Reading from Device to Memory
+* The controller acquires the bus and sends one byte
