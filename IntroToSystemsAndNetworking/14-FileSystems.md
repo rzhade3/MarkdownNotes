@@ -113,7 +113,15 @@ Different implementations for the filesystem have different merits and demerits
 	* **Learn Calculation** max file size, max file size of blocks, number of data blocks needed, number of index blocks needed
 
 ### I- node
-- UNIX systems use a hybrid allocation strategy
-- show the i-node for files in the directory that reference other files (hard or soft linking)
-- a file will point to the same i-node table if it is a hard link
-- if it is a soft link, it will point to its own i-node table which has the path to the file it is soft linking with
+* UNIX systems use a hybrid allocation strategy
+* Show the i-node for files in the directory that reference other files (hard or soft linking)
+* A file will point to the same i-node table if it is a hard link
+* If it is a soft link, it will point to its own i-node table which has the path to the file it is soft linking with
+
+## Bash Commands
+| Command | What it does | Options |
+| --- | --- | --- |
+| ln | Links two files | `-s` Soft links the files |
+| chown | Changes individual ownership of a file to argument | |
+| chgrp | Changes group ownership of a file to argument | |
+
