@@ -109,12 +109,3 @@ The sector read time is 60/(r * s) seconds, and the average rotational latency i
 **Time to read random sector on a disk**:
 * Average seek time (*a*) + Average rotational latency + sector read time
 * *a* + 60/(*r* * 2) + 60/(*r* * *s*) seconds
-
-
-
-
-
-
-
-
-

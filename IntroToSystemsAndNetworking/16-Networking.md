@@ -27,7 +27,7 @@ The part of the OS dedicated to networking is called the *protocol stack*
 ### Structure of Protocol Stack
 To solve the above problems, we structure the *protocol stack* to separate all of the above concerns in layers.
 
-![Internet Protocol Stack](resources/protocol_stack.png)
+![Internet Protocol Stack](images/protocol_stack.png)
 
 As shown above, there are several parts to this stack:
 1. **Application Layer:** Responsible for supporting network based applications
@@ -45,10 +45,28 @@ As shown above, there are several parts to this stack:
 ### OSI Model
 There is an alternative network model called the *Open Systems Interconnection suite*
 
-![OSI Model](resources/osi_model.png)
+![OSI Model](images/osi_model.png)
 
 Only two differing layers here:
 * **Presentation Layer:** Subsumes any functionality that is common among several applications
 	* E.g. Formatting and character conversion
 * **Session Layer:** Manager of a specific communcation session between two end points
-	* If you are having several IM sessions across the network, this maintain process level information for each specific one
+	* If you are having several IM sessions across the network, this maintains process level information for each specific one
+
+## Transport Layer
+
+* Functionality
+	1. Support arbitrary data size at the application level
+	2. Support in- order delivery of data
+	3. Shield application from loss/ corruption of data
+* Data can either be viewed as a *message* or a *data stream*
+	* *Message:* One off
+		* Leads to *connection oriented*
+		* TCP
+	* *Data stream:* Data keeps coming
+		* Leads to *stream oriented*
+		* UDP
+
+### Protocols
+The transport layer consists of two main protocols: **TCP** and **UDP**
+* **TCP:**

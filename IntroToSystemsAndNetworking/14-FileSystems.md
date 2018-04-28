@@ -3,7 +3,7 @@ Until now, we dealt with how hardware interfaces with software and vice versa. B
 
 ## Introduction
 
-### Definition
+### Definitions
 * **File System:** A way of interfacing with I/O and maintaining the hard disk in the computer
 * **File:** The software abstraction for an input/output device, since a device serves as either a source or sink of information
 * **Metadata:** The attributes associated with a file
