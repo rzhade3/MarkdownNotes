@@ -66,7 +66,50 @@ Device controller has the capability to transfer data between itself and memory 
 
 ## I/O Processor
 
-An I/O processor takes a chain of commands for devices and carries them out without interrupting the main processor. The main processor sets up an I/O program in main memory and then starts up the I/O processor. The I/O processor then completes the program and interrupts the processor.
+An I/O processor takes a chain of commands for devices and carries them out without interrupting the main processor. The main processor sets up an I/O program in main memory and then starts up the I/O processor. The I/O processor then completes the program and interrupts the processor. This is similar to the DMA controller, except it can handle multiple commands at once.
+
+## Device Driver
+It is a part of the OS that issues commands to the device. Its specifics depend on the device characteristics.
+
+## Disks
+* Modern disk drives consists of **platters** of lightweight non ferromagnetic material coated with a ferromagnetic material on the top and the bottom.
+* There is a central **spindle** that bands these together and rotates.
+* There is an array of magnetic read/write heads, one for each surface, and each head doesn't touch the surface.
+* An **arm** connects each head to a common **shaft**. Due to this structure, all the heads can be moved in unison in and out of the disk, so all heads line up on their surfaces at the same position.
+* A **track** is a circular band of magnetic recording on the platter.
+* A **sector** is a contiguous recording of bytes on a track. It's the basic unit of recording on the disk.
+![Image](images/magneticdisk.png)
+* The set of all the tracks form a **cylinder**.
+![Image](images/cylinder..png)
+
+### Recording Types
+![Image](images/recording.png)
+
+### Formulas
+
+The capacity of a disk with non-zoned recording is *p* * *n* * *t* * *s* * *b*, where:
+* *p* is number of platters
+* *n* number of surfaces per platter
+* *t* number of tracks per surface
+* *s* number of sectors per track
+* *b* number of bytes per sector
+
+With zoned recording, the formula is *p* * *n* (\sigma_z (t_zi * s_zi) * *b*) where:
+* *z* is the number of zones
+* *t_zi* is the number of tracks at zone z_i
+* *s_zi* is the number of sectors per track at zone z_i.
+
+The data transfer rate of a disk is (*s* * *b* * *r*)/60 bytes per sec, where:
+* *r* is the rotational speed of the disk in RPM (Revolutions per Minute)
+
+The amount of data read in one revolution is *s* * *b* and the time for one revolution, or rotational latency is 60/*r* seconds.
+
+The sector read time is 60/(r * s) seconds, and the average rotational latency is 60/(r * 2) seconds.
+
+**Time to read random sector on a disk**:
+* Average seek time (*a*) + Average rotational latency + sector read time
+* *a* + 60/(*r* * 2) + 60/(*r* * *s*) seconds
+
 
 
 
