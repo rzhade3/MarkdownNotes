@@ -33,9 +33,45 @@ This refers to the moving of data back and forth between a device and a processo
 Polling and interrupt work for slow-speed devices that produce data asynchronously (data production is not rhythmic). However, programmed I/O doesn't work for high-speed devices like disks that produce data synchronously. There is potential for data loss when programmed I/O is used for high speed devices. Even for slow speed devices, programmed I/O is an inefficient use of the processor's resources.
 
 ## Direct Memory Access (DMA)
-Device controller has the capability to transfer data between itself and memory without the intervention of the processor. The transfer is initiated by the processor, but then has nothing ot do with the transfer itself.
+Device controller has the capability to transfer data between itself and memory without the intervention of the processor. The transfer is initiated by the processor, but then has nothing to do with the transfer itself.
 
 **Streaming Devices:** Once data transfer starts in either direction, data moves in or out of the device continuously until transfer completion.
 
-### Reading from Device to Memory
-* The controller acquires the bus and sends one byte
+### Transfer from Device to Memory
+* The controller acquires the bus and sends a certain number of bytes into memory. As the bus is used by everone, the data transfer is asynchronous.
+* To smooth it out between a synchronous controller and an asynchronous bus, a hardware buffer is needed, between the controller and the bus. The size of the buffer should be as big as the size of the number of bytes sent out (unit of synchronous transfer).
+* To initiate a transfer, the processor needs to convey the following to the device controller:
+    * Command
+    * Address on Device
+    * Memory Buffer Address
+    * Amount of Data Transfer
+* In addition to that, the controller has a status register to record the device status.
+![Image](images/DMAcontroller.png)
+* **Cycle Stealing:** This happens when the device controller competes with the processor for memory bus cycles. The device controller *steals* cycles from the processor, but that is not a big deal because the processor works mostly out of the cache.
+
+## Buses
+ The bus has the following components:
+ * Address lines: Same number as bit addressability of processor
+ * Data lines
+ * Command lines: Encode the specific command to the memory system
+ * Interrupt lines
+ * Interrupt Acknowledgment lines
+ * Bus arbitration lines
+
+### Design of Buses
+* Buses sometimes operate in a synchronous fashion, and sometimes in an asynchronous one.
+* Because of the former, there is a **bus clock line** that orchestrates the protocol action on the devices.
+* Because of the latter, the bus *master* initiates an action which is done when the bus *slave* responds.
+* To increase bus usage, there are **split transaction buses** so several transactions can occur at once.
+
+## I/O Processor
+
+An I/O processor takes a chain of commands for devices and carries them out without interrupting the main processor. The main processor sets up an I/O program in main memory and then starts up the I/O processor. The I/O processor then completes the program and interrupts the processor.
+
+
+
+
+
+
+
+
