@@ -52,6 +52,49 @@ I-MEM and D-MEM are replaced with I-Cache and D-Cache.
 * **Miss in the IF Stage:** IF stage sends the reference to memory to retrieve this instruction. Until this happens, the processor sends NOPs to the next stage.
 * **Miss in the MEM Stage:** Only happens for load/store. MEM sends NOPs to WB till the memory reference completes. It also freezes the previous instructions from advancing.
 
+## Calculations
+- block offset = log2(B) (B = Block Size)
+- Lines of Cache = S/B (S = Total Size of Cache)
+- index bits (n) = log2(L)
+- tag = a - (b + n) (a = total address size of cache)
+
+1. Consider a multiworld direct-mapped cache with data size of 64KB. The CPU generates a 32-bit byte-addressable memory address. Each memory word
+contains four bytes. The block size is 16 bytes. The cache uses a write-back policy with one dirty bit per word. The cache has one valid bit per data block.
+a. how does the CPU interpret the memory address
+
+Block Size = B = 16 bytes
+
+b = log2(16) = 4
+
+L = 64 KB/16 bytes = 4096
+
+n = log2(4096) = 12
+
+t = a - (n + b) = 32 - (12 + 4) = 16
+
+b. compute the total amount of storage for implementing the cache (actual data + metadata)
+
+Data = 16 bytes x 8bits/byte = 128 bits
+
+Valid Bit = 1 bit
+
+Dirty Bits = 4 bits (1 bit for each word)
+
+Tag = 16 bits
+
+Total = 149 bits
+
+149 x 4096 (number of cache lines) = 610,304 bits
+
+The space requirement for metadata = total space - actual data
+
+= 610,304 - 64KB
+
+= 610, 304 - 524,288
+
+= 86,016
+
+The space overhead = metadata/total space = 86,016/610,304 = 14%
 
 
 
