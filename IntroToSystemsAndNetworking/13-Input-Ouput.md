@@ -80,7 +80,7 @@ It is a part of the OS that issues commands to the device. Its specifics depend 
 * A **sector** is a contiguous recording of bytes on a track. It's the basic unit of recording on the disk.
 ![Image](images/magneticdisk.png)
 * The set of all the tracks form a **cylinder**.
-![Image](images/cylinder..png)
+![Image](images/cylinder.png)
 
 ### Recording Types
 ![Image](images/recording.png)
