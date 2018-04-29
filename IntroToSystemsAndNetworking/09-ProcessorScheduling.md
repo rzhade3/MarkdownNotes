@@ -72,6 +72,9 @@ Below is an example of scheduling metrics
 | Shortest Remaining Job First | Yes | Yes | No |
 | Round Robin | Yes | No | No |
 
+* Starvation: short processes get to go, long processes wait
+* Convoy effect: long processes get to go, short processes wait
+
 ### Shortest Job First
 A problem that is associated with SJF is starvation is the concept of **aging**, where a job that has been waiting for a long time in the ready queue gets preference. This also happens in priority schedulers, and aging can be used to solve the same problem.
 
