@@ -16,3 +16,6 @@ Basic Object Oriented programming principles that I wrote up for a friend. This 
 
 ### [Machine Learning](https://github.com/rzhade3/MarkdownNotes/tree/master/MachineLearning)
 Notes for the online Coursera course in Machine Learning. There are a lot of equations in this folder
+
+### [Computer Networking](https://github.com/rzhade3/MarkdownNotes/tree/master/ComputerNetworking)
+Notes for my CS 3251 Class.
