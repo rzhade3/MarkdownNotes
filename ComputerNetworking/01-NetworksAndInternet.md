@@ -48,3 +48,8 @@ If needed, these services can be implemented in the application layer of the Int
 ## The Network Core
 
 ### Circuit Switching
+In circuit switching, all the resources needed for communication between two end systems are reserved for the whole time of communication. One such example is a traditional telephone network.
+
+A circuit in a link is implemented in the following ways:
+1. **Frequency-Division Multiplexing (FDM):**
+2. **Traditional-Divison Multiplexing (TDM):**
